@@ -1,0 +1,19 @@
+*** Variables ***
+${ip}             10.130.205.34    # netapp cluster mgmt ip
+${username}       admin
+${password}       netapp123
+&{args}           root=False
+&{vol_createargs}    vserver=vs1    volume=new_vol    aggregate=aggr1_PHL2ELABSANNTP_01_SSD    size=500GB    # vol_create args
+&{vol_offlineargs}    vserver=vs1    volume=new_vol
+&{lun_createargs}    vserver=vs1    volume=new_vol    lun=new_lun    size=100GB    ostype=vmware    # Required fields \ \ \ vserver,volume,lun,size,ostype
+&{lun_vs_and_path_args}    vserver=vs1    path=/vol/new_vol/new_lun
+&{lun_resize_args}    vserver=vs1    path=/vol/new_vol/new_lun    size=200GB
+&{lun_modify_args}    vserver=vs1    path=/vol/new_vol/new_lun    space-reserve=disabled
+&{vserver_delargs}    vserver=vs10
+&{rootvol_offlineargs}    vserver=vs10    volume=vs10_root
+&{lif_delargs}    vserver=vs2    lif=Temp
+&{aggr_deleteargs}    aggregate=test_aggr1_SSD
+&{vserver_createargs}    vserver=vs10    subtype=default    rootvolume=vs10_root    aggregate=aggr1_PHL2ELABSANNTP_01_SSD    rootvolume-security-style=mixed
+&{lif_createargs}    vserver=vs2    lif=Temp    role=data    data-protocol=iscsi    home-node=PHL2ELABSANNTP-01    home-port=a0a-300    address=192.168.0.172
+...               netmask=255.255.255.0
+&{aggr_createargs}    aggregate=test_aggr1_SSD    diskcount=5

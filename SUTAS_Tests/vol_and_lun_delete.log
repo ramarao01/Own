@@ -1,0 +1,15 @@
+2017-01-26 06:00:11,763 : executecommand : vol_and_lun_delete : INFO : Executing "lun delete -vserver vs1 -path /vol/new_vol/new_lun "
+2017-01-26 06:00:11,795 : executecommand : vol_and_lun_delete : INFO : 
+
+2017-01-26 06:00:11,809 : executecommand : vol_and_lun_delete : INFO : Executing "volume offline -vserver vs1 -volume new_vol "
+2017-01-26 06:00:12,263 : executecommand : vol_and_lun_delete : INFO : Volume "vs1:new_vol" is now offline.                                           
+
+
+2017-01-26 06:00:12,278 : executecommand : vol_and_lun_delete : INFO : Executing "volume delete -vserver vs1 -volume new_vol "
+2017-01-26 06:00:17,460 : executecommand : vol_and_lun_delete : INFO : [Job 2908] Job is queued: Delete new_vol.                                      [Job 2908] Job succeeded: Successful                                           
+
+
+2017-01-26 06:00:17,460 : executecommand : vol_and_lun_delete : INFO : Executing "lun show -vserver vs1 -path /vol/new_vol/new_lun -fields space-reserve "
+2017-01-26 06:00:17,599 : executecommand : vol_and_lun_delete : ERROR : There are no entries matching your query.
+
+

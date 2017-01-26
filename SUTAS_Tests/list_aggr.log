@@ -1,0 +1,13 @@
+2017-01-25 04:59:00,151 : fasShow : SUTAS : INFO : running command aggr show -field aggregate,size,availsize,node -root False 
+2017-01-25 04:59:00,290 : fasShow : SUTAS : INFO : aggregate node              availsize size    
+--------- ----------------- --------- ------- 
+Extreme   PHL2ELABSANNTP-03 722.2GB   11.77TB 
+Performance PHL2ELABSANNTP-02 5.90TB  64.91TB 
+VNX5800_nlsas PHL2ELABSANNTP-03 720.7GB 8.45TB 
+VNX5800_sas PHL2ELABSANNTP-04 1.01TB  13.18TB 
+VNX5800_ssd PHL2ELABSANNTP-03 433.7GB 2.23TB  
+aggr1_PHL2ELABSANNTP_01_SSD PHL2ELABSANNTP-01 5.81TB 64.91TB 
+aggr1_PHL2ELABSANNTP_04_SAS PHL2ELABSANNTP-04 724.8GB 11.77TB 
+7 entries were displayed.
+
+

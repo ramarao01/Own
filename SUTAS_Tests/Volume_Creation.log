@@ -1,0 +1,15 @@
+2017-01-26 05:59:32,615 : executecommand : Volume_Creation : INFO : Executing "volume create -vserver vs1 -volume new_vol -aggregate aggr1_PHL2ELABSANNTP_01_SSD -size 500GB "
+2017-01-26 05:59:37,716 : executecommand : Volume_Creation : INFO : [Job 2907] Job is queued: Create new_vol.                                      [Job 2907] Job succeeded: Successful                                           
+
+
+2017-01-26 05:59:37,716 : executecommand : Volume_Creation : INFO : Executing "lun create -vserver vs1 -volume new_vol -ostype vmware -lun new_lun -size 100GB "
+2017-01-26 05:59:37,841 : executecommand : Volume_Creation : INFO : 
+Created a LUN of size 100g (107374182400)
+
+
+2017-01-26 05:59:37,857 : executecommand : Volume_Creation : INFO : Executing "lun show -vserver vs1 -path /vol/new_vol/new_lun -fields size "
+2017-01-26 05:59:37,966 : executecommand : Volume_Creation : INFO : vserver path                 size  
+------- -------------------- ----- 
+vs1     /vol/new_vol/new_lun 100GB 
+
+
